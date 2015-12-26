@@ -1,0 +1,67 @@
+type 
+    myInt = integer;
+    myChar= char;
+    myChar2 = myChar;
+    myClass = class 
+    begin 
+        i : integer;
+    end;
+    myClass2 = myClass 
+    begin 
+        j : myInt; 
+        function voi() 
+        var 
+            i:integer; 
+        begin 
+            return; 
+        end;
+    end;
+
+var
+    n:integer;
+    k:integer;
+    a[100]:integer;
+    st:myClass2; { 定义数组，数组标号从0开始到99 }
+
+{ 变量定义部分结束，以下是函数定义部分 }
+function qsort(l:myInt,h:integer) { 注意这里没有返回值，因而函数无return语句 }
+var { 函数内变量定义部分。}
+    i:integer;
+    j:myInt;
+    m:integer;
+    t:integer;
+begin { 函数主程序部分 }
+    st.voi();
+    i = l; 
+    j = h;
+    m = a[(i+j) div 2];
+    while i <= j do
+    begin
+        while a[i] < m do 
+            i = i + 1;
+        while m < a[j] do 
+            j = j - 1;
+        if i <= j then
+        begin
+            t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+            i = i + 1;
+            j = j - 1;
+        end;
+    end;
+    if i<h then 
+        qsort(i,h);
+    if j>l then
+        qsort(l,j);
+end;
+
+{ 函数定义部分结束，以下是主程序部分 }
+begin
+    readInteger(n); { 读取个数 }
+    for k = 0 to n-1 do { 注意数组标号从零开始，最多到n-1 }
+        readInteger(a[k]); { 读取数组数值 }
+    qsort(0, n-1); { 调用快排 }
+    for k = 0 to n-1 do
+        writelnInteger(a[k]); { 换行输出数组数值 }
+end.
