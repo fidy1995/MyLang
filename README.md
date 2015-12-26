@@ -1,5 +1,10 @@
 # MyLang
-The compiler for MyLang designed for SE302-The Principle of Compiler.
+The compiler for MyLang designed for SE302-The Principle of Compiler. Written in Qt together with
+```
+Jingcheng Qian
+Zhouhao Zhang
+```
+from Software Institute, Shanghai Jiaotong University. The names are in no particular order.
 
 ## Variable defining
 The variables should be defined like this:
