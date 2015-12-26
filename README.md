@@ -24,7 +24,7 @@ The functions should be defined like this:
     // note you can use no attributes
     function [your function name]([attribute name]:[MyLang type name], ...)
     return [MyLang type name]
-    var         #if you are using locals
+    var         // if you are using locals
         [your variable name] : [MyLang type name];
         ...
     begin
