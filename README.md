@@ -67,6 +67,7 @@ The class should be defined like this:
 Since all attributes and functions in the class of MyLang is public, it is translated into C++ code like this:
 ```C++
 class [your class name] (: [your parent class name]) {
+public:
     [standard type name] [your attribute name];
     ...
 };
