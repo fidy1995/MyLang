@@ -71,3 +71,9 @@ class [your class name] (: [your parent class name]) {
     ...
 };
 ```
+
+## GUI command
+Besides, we provided this simple GUI command:
+
+    #GUIREADFROM:[file path]
+This allows you to read your code from file, but it doesn't support chinese now.
